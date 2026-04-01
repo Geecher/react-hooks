@@ -1,5 +1,5 @@
 #root {
-  max-width: 680px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -74,4 +74,8 @@ header nav {
 
 .gap-1 {
     gap: 1rem;
+}
+
+.about {
+    text-align: left;
 }

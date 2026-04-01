@@ -33,7 +33,9 @@ function useLocalStorage(key, initialValue) {
 // Пример медленной функции для useDebugValue
 function getSlowValue(value) {
     console.log('Calling getSlowValue()');
-    for (let i = 0; i < 1000000000; i++) {}
+    for (let i = 0; i < 1000000000; i++) {
+        console.log(); 
+    }
     return value;
 }
 
