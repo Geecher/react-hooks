@@ -1,5 +1,4 @@
-import React, {useContext, useState} from "react";
-
+import React, { useContext, useState } from "react";
 
 // Создаем два контекста: один для значения темы (ThemeContext), другой для функции обновления темы (ThemeUpdateContext)
 // ThemeContext будет хранить текущее значение темы (темная или светлая)
@@ -23,15 +22,14 @@ export function ThemeProvider({ children }) {
     const [darkTheme, setDarkTheme] = useState(true);
 
     function toggleTheme() {
-        setDarkTheme(prevTheme => !prevTheme);
+        setDarkTheme((prevTheme) => !prevTheme);
     }
 
     return (
         <ThemeContext.Provider value={darkTheme}>
-            <ThemeUpdateContext value={toggleTheme}>
+            <ThemeUpdateContext.Provider value={toggleTheme}>
                 {children}
-            </ThemeUpdateContext>
+            </ThemeUpdateContext.Provider>
         </ThemeContext.Provider>
-    )
+    );
 }
-
